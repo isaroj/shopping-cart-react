@@ -7,7 +7,7 @@ import { faker } from "@faker-js/faker";
 import {Container, Row, Col, Spinner} from 'reactstrap'
 import ProductCard from './ProductCard'
 
-const authKey = "563492ad6f917000010000014bb2dbd0fa774076b13e0bd80d1ace1c";
+const authKey = "YOUR PEXELS API KEY";
 
 
 const Items = ({addToCart}) => {
