@@ -24,3 +24,7 @@ body {
   cursor: pointer;
   user-select: none;
 }
+
+.prodNav {
+  transition: 0.5s ease;
+}

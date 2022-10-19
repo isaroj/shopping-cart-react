@@ -7,7 +7,7 @@ import { faker } from "@faker-js/faker";
 import {Container, Row, Col, Spinner} from 'reactstrap'
 import ProductCard from './ProductCard'
 
-const authKey = "YOUR PEXELS API KEY";
+const authKey = "563492ad6f917000010000014bb2dbd0fa774076b13e0bd80d1ace1c";
 
 
 const Items = ({addToCart}) => {
@@ -36,6 +36,15 @@ const Items = ({addToCart}) => {
             console.log(err)
         } finally {
             setIsLoading(false);
+        }
+    }
+    const changeStyle = () => {
+        if (document.getElementById('prodMain').scrollTop > 90) {
+            document.querySelector(".prodNav").style.backgroundColor =
+              "#02B290";
+        } else {
+             document.querySelector(".prodNav").style.backgroundColor =
+               "#242B2E";
         }
     }
 
@@ -70,8 +79,10 @@ const Items = ({addToCart}) => {
               overflowX: "hidden",
               margin: "auto",
             }}
+            id="prodMain"
+            onScroll={changeStyle}
           >
-            <h1 className="text-center text-white my-2 sticky-top bg-secondary display-6 p-2 rounded">
+            <h1 className="text-center text-white my-2 sticky-top display-6 p-2 prodNav">
               Product Dashboard
             </h1>
 
